@@ -1,0 +1,164 @@
+*, html, body {
+    margin : 0;
+    padding: 0;
+}
+
+@keyframes loncat{
+    0%, 100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    }
+
+@keyframes geser{
+    0%, 100% {
+        transform:translatex(0);
+    }
+    50%{
+        transform:translatex(30px);
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #170055, rgb(46, 27, 109)) ;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: loncat 5s infinite;
+    color: white;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Koulen", sans-serif;
+    color: white;
+    margin:0;
+}
+
+.scan{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.back {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: left;
+    display: flex;
+    margin: 12px;
+}
+
+.back:hover{
+    background-color:whitesmoke ;
+    color:#170055;
+}
+
+.ticket {
+    display: flex;
+    max-width: 100vh;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    background:#170055;
+    box-shadow: 3px 3px 3px black;
+    overflow: hidden;
+    flex-wrap: wrap;
+    animation: geser 4s infinite;
+    border:0.5px solid white;
+}
+
+.ticket::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background: url(timnas.jpg);
+    z-index: -1;
+}
+
+.qr{
+    color: white;
+    padding-right: 45px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid white;
+}
+
+.qr img {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+}
+
+.info {
+    padding: 20px;
+    text-align: left;
+}
+
+.identitas {
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 10%;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.info h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.info .location,
+.info .date,
+.info .tribun {
+    margin: 5px ;
+    font-size: 15px;
+}
+
+.info .tribun-name {
+    color: #3E00FF;
+    font-weight: bold;
+}
+
+.info .time {
+    color: #3E00FF;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.download {
+    background: #3E00FF;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 520px;
+}
+
+.download:hover{
+    border: 1px solid white;
+}
